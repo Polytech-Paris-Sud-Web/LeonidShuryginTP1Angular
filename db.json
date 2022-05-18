@@ -1,16 +1,10 @@
 {
   "articleList": [
     {
-      "id": "1",
-      "title": "Article 1",
-      "authorList": "Author 1",
-      "content": "Content 1"
-    },
-    {
-      "title": "aaaaaaaaaaaa",
-      "content": "bbbbbbbbbb",
-      "authorList": "cccc, kkkk, jjjj",
-      "id": "2L3TvvG"
+      "title": "Fake Title",
+      "content": "sdfsd",
+      "authorList": "fsdf",
+      "id": 1
     }
   ]
 }
