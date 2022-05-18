@@ -3,8 +3,14 @@
     {
       "id": "1",
       "title": "Article 1",
-      "author": "Author 1",
+      "authorList": "Author 1",
       "content": "Content 1"
+    },
+    {
+      "title": "aaaaaaaaaaaa",
+      "content": "bbbbbbbbbb",
+      "authorList": "cccc, kkkk, jjjj",
+      "id": "2L3TvvG"
     }
   ]
 }
