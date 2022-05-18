@@ -1,12 +1,6 @@
 {
   "articleList": [
     {
-      "title": "Fake Title",
-      "content": "sdfsd",
-      "author": "fsdf",
-      "id": 0
-    },
-    {
       "title": "Title 1",
       "content": "Lorem ipsum",
       "author": "Author1, Author2",
@@ -78,9 +72,27 @@
       "content": "qsdqsdqsd",
       "author": "ATTTTTT",
       "id": 13
+    },
+    {
+      "title": "Art",
+      "content": "icle",
+      "author": "Leo",
+      "id": 14
+    },
+    {
+      "title": "Fake Title",
+      "content": "qsdqs",
+      "author": "sds",
+      "id": 15
+    },
+    {
+      "title": "qsqsqsqsqs",
+      "content": "qsds",
+      "author": "qsssss",
+      "id": 16
     }
   ],
-  "authorBio": [
+  "author": [
     {
       "bio": "AuthorBio"
     },

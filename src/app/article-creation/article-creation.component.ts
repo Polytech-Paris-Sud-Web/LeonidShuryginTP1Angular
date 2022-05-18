@@ -4,6 +4,7 @@ import { ArticleNew } from 'src/model/articleNew';
 import { Article } from 'src/model/article';
 import { ArticleService } from '../article.service';
 import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { EventEmitter } from '@angular/core';
 export class ArticleCreationComponent implements OnInit {
   articleForm: FormGroup;
 
-  constructor(private articleService: ArticleService, private fb: FormBuilder) {
+  constructor(private articleService: ArticleService, private fb: FormBuilder, private router : Router) {
     this.articleForm = this.fb.group({
       title: ['Fake Title', Validators.required],
       content: ['', Validators.required],
@@ -23,6 +24,10 @@ export class ArticleCreationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  goBack() : void {
+    this.router.navigateByUrl('/');
   }
 
   createArticle() {
@@ -36,5 +41,7 @@ export class ArticleCreationComponent implements OnInit {
     const articleNew = new ArticleNew(newArticle);
 
     this.articleService.createArticle(articleNew).subscribe()
+    this.goBack();
+    
   }
 }
