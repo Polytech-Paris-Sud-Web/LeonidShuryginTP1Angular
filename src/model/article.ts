@@ -2,13 +2,13 @@ export class Article {
     id: number;
     title: string;
     content: string;
-    authorList: string;
+    author: string;
 
-    constructor(id: number, title: string, content: string, authorList: string) {
+    constructor(id: number, title: string, content: string, author: string) {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.authorList = authorList;
+        this.author = author;
     }
 
     getId(): number {
@@ -24,6 +24,6 @@ export class Article {
     }
 
     getAuthor(): string {
-        return this.authorList;
+        return this.author;
     }
 }

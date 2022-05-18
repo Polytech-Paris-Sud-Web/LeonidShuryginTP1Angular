@@ -33,7 +33,6 @@ export class ArticleListComponent implements AfterViewInit {
 
     // C'est très sale je sais mais j'ai pas eu le temps de trouver comment attendre que la table soit chargée
     setTimeout(() => {
-      console.log("EXECUTE")
       this.articleListData.paginator = this.paginator;
       this.articleListData.sort = this.sort;
     }, 1000)

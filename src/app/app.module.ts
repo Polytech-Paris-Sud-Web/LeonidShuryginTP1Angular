@@ -11,6 +11,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleService } from './article.service';
 import { ArticleCreationComponent } from './article-creation/article-creation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthorBio } from 'src/model/authorBio';
 
 //Angular Material
 import { MatButtonModule } from '@angular/material/button';
@@ -22,6 +23,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { AuthorBioComponent } from './author-bio/author-bio.component';
 
 
 
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'create', component: ArticleCreationComponent },
   { path: 'articleList', component: ArticleListComponent },
   { path: 'article/:id', component: ArticleComponent },
+  { path: 'author/:name', component: AuthorBioComponent },
   { path: '', component: ArticleListComponent }
 ]
 @NgModule({
@@ -36,7 +39,8 @@ const appRoutes: Routes = [
     AppComponent,
     ArticleComponent,
     ArticleListComponent,
-    ArticleCreationComponent
+    ArticleCreationComponent,
+    AuthorBioComponent
   ],
   imports: [
     RouterModule.forRoot(

@@ -18,7 +18,7 @@ export class ArticleCreationComponent implements OnInit {
     this.articleForm = this.fb.group({
       title: ['Fake Title', Validators.required],
       content: ['', Validators.required],
-      authorList: ['', Validators.required],
+      author: ['', Validators.required],
     });
   }
 
@@ -26,11 +26,11 @@ export class ArticleCreationComponent implements OnInit {
   }
 
   createArticle() {
-    const { title, content, authorList } = this.articleForm.value;
+    const { title, content, author } = this.articleForm.value;
     const newArticle = {
       title,
       content,
-      authorList
+      author
     }
 
     const articleNew = new ArticleNew(newArticle);

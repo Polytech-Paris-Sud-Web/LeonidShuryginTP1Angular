@@ -1,12 +1,12 @@
 export class ArticleNew {
     title: string;
     content: string;
-    authorList: string;
+    author: string;
 
     constructor(articleNew: any) {
         this.title = articleNew.title;
         this.content = articleNew.content;
-        this.authorList = articleNew.authorList;
+        this.author = articleNew.author;
     }
 
     getTitle(): string {
@@ -18,6 +18,6 @@ export class ArticleNew {
     }
 
     getAuthor(): string {
-        return this.authorList;
+        return this.author;
     }
 }
