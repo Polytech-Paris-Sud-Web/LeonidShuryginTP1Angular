@@ -21,8 +21,8 @@
         </ng-container>
 
         <ng-container matColumnDef="Content" hidden>
-            <th hidden mat-header-cell *matHeaderCellDef> Content </th>
-            <td hidden mat-cell *matCellDef="let element"> {{element.getContent()}} </td>
+            <th mat-header-cell *matHeaderCellDef> Content </th>
+            <td mat-cell *matCellDef="let element"> {{element.getContent()}} </td>
         </ng-container>
 
         <ng-container matColumnDef="Details">
