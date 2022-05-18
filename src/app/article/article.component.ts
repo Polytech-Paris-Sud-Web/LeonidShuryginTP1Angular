@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-article',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
     
-  readonly title: string;
-  readonly content: string;
+  @Input() 
+  title : string;
+  @Input("customContent") 
+  content : string;
 
   constructor(){
     this.title = 'First Article';
