@@ -1,5 +1,4 @@
 <p>article-list works!</p>
 
-<div *ngFor="let article of this.articleList">
-    <app-article [article]="this.article"></app-article>
-</div>
+<app-article *ngFor="let article of this.articleList | async" [article]="article">
+</app-article>

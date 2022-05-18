@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/model/article';
 import { ArticleService } from '../article.service';
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-article-list',
@@ -8,17 +9,13 @@ import { ArticleService } from '../article.service';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-  articleList = new Array<Article>();
+  articleList: Observable<Article[]>;
 
   constructor(private articleService: ArticleService) {
     this.articleList = this.articleService.getArticles();
   }
 
-  // articleList(): Article[] {
-  //   return this.articleService.getArticles();
-  // }
-
-  ngOnInit(): void {
-
+  ngOnInit() {
+    this.articleList = this.articleService.getArticles();
   }
 }

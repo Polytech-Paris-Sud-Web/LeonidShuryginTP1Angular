@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Article } from '../model/article';
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+  }
 
-  public getArticles(): Article[] {
-    return [
-      new Article("T1", "C1", "A1"),
-      new Article("T2", "C2", "A2"),
-      new Article("T3", "C3", "A3")
-    ];
+  public getArticles(): Observable<Article[]> {
+    return this.http.get<Article[]>("http://localhost:3000/articles");
   }
 }
