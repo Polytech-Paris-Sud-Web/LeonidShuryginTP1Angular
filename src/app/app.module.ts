@@ -21,6 +21,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -56,7 +57,8 @@ const appRoutes: Routes = [
     MatDividerModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule
   ],
   exports: [
 
@@ -68,7 +70,8 @@ const appRoutes: Routes = [
     MatDividerModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]
