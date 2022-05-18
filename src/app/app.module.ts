@@ -16,6 +16,7 @@ import { ArticleService } from './article.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [ArticleService],

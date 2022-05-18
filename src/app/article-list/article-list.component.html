@@ -1,4 +1,6 @@
-<p>article-list works!</p>
-
-<app-article *ngFor="let article of this.articleList | async" [article]="article">
-</app-article>
+<div>
+    <p>TEST D'AFFICHAGE ARTICLE LIST</p>
+    
+    <app-article *ngFor="let article of this.articleList | async" [article]="article" (deletedArticle)="delete($event)">
+    </app-article>
+</div>

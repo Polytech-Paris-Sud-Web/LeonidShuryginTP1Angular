@@ -9,13 +9,17 @@ import { Observable } from "rxjs";
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-  articleList: Observable<Article[]>;
+  articleList: Observable<Article[]>
 
   constructor(private articleService: ArticleService) {
-    this.articleList = this.articleService.getArticles();
+    this.articleList = this.articleService.getArticles()
   }
 
   ngOnInit() {
-    this.articleList = this.articleService.getArticles();
+    this.articleList = this.articleService.getArticles()
+  }
+
+  delete(article: Article) {
+    this.articleService.deleteArticle(article).subscribe()
   }
 }
