@@ -9,6 +9,7 @@ import { Observable } from "rxjs";
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
+  displayedColumns: string[] = ['Id', 'Title'];
   articleList: Observable<Article[]>
 
   constructor(private articleService: ArticleService) {

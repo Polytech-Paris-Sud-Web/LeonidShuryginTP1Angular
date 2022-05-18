@@ -13,6 +13,12 @@ export class ArticleService {
   constructor(private http: HttpClient) {
   }
 
+  public getArticle(id: number): Observable<Article> {
+    return this.http.get<Article>("http://localhost:3000/articleList/" + id).pipe(
+      map(article => new Article(article.id, article.title, article.content, article.authorList))
+    )
+  }
+
   public getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>("http://localhost:3000/articleList").pipe(
       map(data => data.map(article => new Article(article.id, article.title, article.content, article.authorList)))

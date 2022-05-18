@@ -1,8 +1,5 @@
 <div *ngIf="this.article != null">
-    <p>TEST D'AFFICHAGE ARTICLE</p>
+    <a routerLink="/article/{{this.article.getId()}}">{{this.article.getTitle()}}</a>
     <h3> {{this.article.getTitle()}} </h3>
-    <p> {{this.article.getId() }} </p>
-    <p> {{this.article.getContent()}} </p>
-    <p> {{this.article.getAuthor()}} </p>
     <button mat-raised-button color="warn" (click)="delete()">Delete</button>
 </div>

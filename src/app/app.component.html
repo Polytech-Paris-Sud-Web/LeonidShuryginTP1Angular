@@ -1,42 +1,13 @@
-<!-- <div> -->
-<!-- <a routerLink="/create">New Article</a>
-    <mat-drawer-container class="example-container" autosize>
-        <mat-drawer #drawer class="example-sidenav" mode="side">
-            <p>Navigation menu</p>
-            <a routerLink="/create">New Article</a>
-            
-        </mat-drawer>
-    
-        <div class="example-sidenav-content">
-            <button type="button" mat-button (click)="drawer.toggle()">
-                Toggle sidenav
-            </button>
-        </div>
-    
-    </mat-drawer-container>
-    <router-outlet></router-outlet> -->
-
-<!-- <mat-drawer-container class="example-container" autosize>
-        <mat-drawer #drawer class="example-sidenav" mode="side">
-          <p>Sidenav</p>
-          <a routerLink="/create">New Article</a>
-        </mat-drawer>
-      
-        <div class="example-sidenav-content">
-          <button type="button" mat-button (click)="drawer.toggle()">
-            Toggle sidenav
-          </button>
-        </div>
-      
-      </mat-drawer-container>
-      <router-outlet></router-outlet> -->
-<!-- </div> -->
-
 <div>
     <mat-drawer-container class="example-container">
         <mat-drawer mode="side" opened>
             <h1>Menu</h1>
-            <a routerLink="/create">New Article</a>
+            <p>
+                <a routerLink="/">Homepage</a>
+            </p>
+            <p>
+                <a routerLink="/create">New Article</a>
+            </p>
         </mat-drawer>
         <mat-drawer-content class="content">
             <router-outlet></router-outlet>
