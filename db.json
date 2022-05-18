@@ -5,6 +5,12 @@
       "content": "sdfsd",
       "authorList": "fsdf",
       "id": 1
+    },
+    {
+      "title": "Title",
+      "content": "Lorem ipsum",
+      "authorList": "Author1, Author2",
+      "id": 2
     }
   ]
 }

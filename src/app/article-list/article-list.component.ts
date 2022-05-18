@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/model/article';
 import { ArticleService } from '../article.service';
 import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-article-list',
@@ -9,18 +11,23 @@ import { Observable } from "rxjs";
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-  displayedColumns: string[] = ['Id', 'Title'];
-  articleList: Observable<Article[]>
+  displayedColumns: string[] = ['Id', 'Title', 'Content', 'Details']
+  articleList: Article[] = []
+  articleListData = new MatTableDataSource<Article>(this.articleList);
 
   constructor(private articleService: ArticleService) {
-    this.articleList = this.articleService.getArticles()
   }
 
   ngOnInit() {
-    this.articleList = this.articleService.getArticles()
+    this.articleService.getArticles().subscribe(data => this.articleListData = new MatTableDataSource<Article>(data))
   }
 
   delete(article: Article) {
     this.articleService.deleteArticle(article).subscribe()
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.articleListData.filter = filterValue.trim().toLowerCase();
   }
 }

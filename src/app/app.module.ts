@@ -11,7 +11,6 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleService } from './article.service';
 import { ArticleCreationComponent } from './article-creation/article-creation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 //Angular Material
 import { MatButtonModule } from '@angular/material/button';
@@ -20,12 +19,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 const appRoutes: Routes = [
   { path: 'create', component: ArticleCreationComponent },
   { path: 'articleList', component: ArticleListComponent },
-  { path: 'article/:id', component: ArticleDetailComponent },
+  { path: 'article/:id', component: ArticleComponent },
   { path: '', component: ArticleListComponent }
 ]
 @NgModule({
@@ -33,8 +35,7 @@ const appRoutes: Routes = [
     AppComponent,
     ArticleComponent,
     ArticleListComponent,
-    ArticleCreationComponent,
-    ArticleDetailComponent
+    ArticleCreationComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -53,7 +54,9 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     MatDividerModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
 
@@ -63,7 +66,9 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     MatDividerModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]
