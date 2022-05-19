@@ -1,12 +1,6 @@
 {
   "articleList": [
     {
-      "title": "Title 1",
-      "content": "Lorem ipsum",
-      "author": "Author1, Author2",
-      "id": 1
-    },
-    {
       "title": "Title 2",
       "content": "Lorem ipsum",
       "author": "Author1, Author2",
@@ -29,37 +23,6 @@
       "content": "Lorem ipsum",
       "author": "Author1, Author2",
       "id": 5
-    },
-    {
-      "title": "Title 6",
-      "content": "Lorem ipsum",
-      "author": "Author1, Author2",
-      "id": 6
-    },
-    {
-      "title": "Fake Title",
-      "content": "gg",
-      "id": 7
-    },
-    {
-      "title": "AuthorBio",
-      "content": "AuthorBio",
-      "id": 8
-    },
-    {
-      "title": "affss",
-      "content": "qsdqvfc hqsjh  qsdkqsd",
-      "id": 9
-    },
-    {
-      "title": "affss",
-      "content": "qsdqvfc hqsjh  qsdkqsd",
-      "id": 10
-    },
-    {
-      "title": "affss",
-      "content": "qsdqvfc hqsjh  qsdkqsd",
-      "id": 11
     },
     {
       "title": "qwsddf",
@@ -94,12 +57,15 @@
   ],
   "author": [
     {
+      "id": "AuthorBio",
       "bio": "AuthorBio"
     },
     {
+      "id": "fsdf",
       "bio": "fsdf"
     },
     {
+      "id": "ATTTTTT",
       "bio": "ATTTTTT"
     }
   ]

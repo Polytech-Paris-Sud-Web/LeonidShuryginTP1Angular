@@ -20,10 +20,10 @@ export class AuthorBioComponent implements OnInit {
   }
 
   getAuthor(): void {
-    const name = this.route.snapshot.paramMap.get('name');
+    const name = this.route.snapshot.paramMap.get('id');
 
     this.route.params.subscribe(params => {
-      this.authorService.getAuthor(params['name']).subscribe({ next: (data) => this.author = data });
+      this.authorService.getAuthor(params['id']).subscribe({ next: (data) => this.author = data });
     });
   }
 

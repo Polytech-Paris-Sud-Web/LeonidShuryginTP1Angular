@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Article } from '../../model/article';
-import { ArticleNew } from 'src/model/articleNew';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { AuthorBio } from 'src/model/authorBio';
+
+// Custom class
+import { Article } from '../../model/article';
+import { ArticleNew } from 'src/model/articleNew';
 
 @Injectable({
   providedIn: 'root'
@@ -32,9 +33,5 @@ export class ArticleService {
 
   public createArticle(article: ArticleNew): Observable<ArticleNew> {
     return this.http.post<ArticleNew>("http://localhost:3000/articleList", article)
-  }
-
-  public getAuthor(name: string): Observable<AuthorBio> {
-    return this.http.get<AuthorBio>("http://localhost:3000/author/" + name)
   }
 }

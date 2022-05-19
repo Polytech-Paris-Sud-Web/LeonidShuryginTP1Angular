@@ -40,11 +40,6 @@ export class ArticleComponent implements OnInit {
     this.router.navigateByUrl('/');
   }
 
-  // delete() {
-  //   this.deletedArticle.emit(this.article);
-  //   this.goBack()
-  // }
-
   delete(article: Article) {
     this.articleService.deleteArticle(article).subscribe()
     this.goBack()

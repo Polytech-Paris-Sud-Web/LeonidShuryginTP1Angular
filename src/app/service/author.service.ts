@@ -15,6 +15,8 @@ export class AuthorService {
   }
 
   public getAuthor(name: string): Observable<AuthorBio> {
-    return this.http.get<AuthorBio>("http://localhost:3000/author/" + name)
+    return this.http.get<AuthorBio>("http://localhost:3000/author/" + name).pipe(
+      map(data =>  new AuthorBio(data.id, data.bio))
+    )
   }
 }

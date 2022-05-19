@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
-//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleListComponent } from './article-list/article-list.component';
@@ -33,7 +32,7 @@ const appRoutes: Routes = [
   { path: 'create', component: ArticleCreationComponent },
   { path: 'articleList', component: ArticleListComponent },
   { path: 'article/:id', component: ArticleComponent },
-  { path: 'author/:name', component: AuthorBioComponent },
+  { path: 'author/:id', component: AuthorBioComponent },
   { path: '', component: ArticleListComponent }
 ]
 @NgModule({
@@ -51,7 +50,6 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     HttpClientModule,
-    //AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
 
