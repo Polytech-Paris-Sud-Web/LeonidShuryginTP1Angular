@@ -2,7 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ArticleNew } from 'src/model/articleNew';
 import { Article } from 'src/model/article';
-import { ArticleService } from '../article.service';
+import { ArticleService } from '../service/article.service';
 import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 

@@ -8,10 +8,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleListComponent } from './article-list/article-list.component';
-import { ArticleService } from './article.service';
+
 import { ArticleCreationComponent } from './article-creation/article-creation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthorBio } from 'src/model/authorBio';
+import { AuthorBioComponent } from './author-bio/author-bio.component';
+
+//Service
+import { ArticleService } from './service/article.service';
+import { AuthorService } from './service/author.service';
 
 //Angular Material
 import { MatButtonModule } from '@angular/material/button';
@@ -23,8 +27,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { AuthorBioComponent } from './author-bio/author-bio.component';
-
 
 
 const appRoutes: Routes = [
@@ -77,7 +79,7 @@ const appRoutes: Routes = [
     MatInputModule,
     MatPaginatorModule
   ],
-  providers: [ArticleService],
+  providers: [ArticleService, AuthorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

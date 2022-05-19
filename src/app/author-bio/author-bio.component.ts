@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthorBio } from 'src/model/authorBio';
-import { ArticleService } from '../article.service';
 import { ActivatedRoute } from '@angular/router';
+
+//Service
+import { AuthorService } from '../service/author.service';
+
+//Custom class
+import { AuthorBio } from 'src/model/authorBio';
 
 @Component({
   selector: 'app-author-bio',
@@ -11,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AuthorBioComponent implements OnInit {
   author: AuthorBio;
 
-  constructor(private articleService: ArticleService, private route: ActivatedRoute) {
+  constructor(private authorService: AuthorService, private route: ActivatedRoute) {
 
   }
 
@@ -19,12 +23,11 @@ export class AuthorBioComponent implements OnInit {
     const name = this.route.snapshot.paramMap.get('name');
 
     this.route.params.subscribe(params => {
-      this.articleService.getAuthor(params['name']).subscribe({ next: (data) => this.author = data });
+      this.authorService.getAuthor(params['name']).subscribe({ next: (data) => this.author = data });
     });
   }
 
   ngOnInit(): void {
     this.getAuthor()
   }
-
 }

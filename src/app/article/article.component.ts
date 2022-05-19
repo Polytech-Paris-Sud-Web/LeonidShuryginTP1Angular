@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { Article } from 'src/model/article';
-import { ArticleService } from '../article.service';
+import { ArticleService } from '../service/article.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 

@@ -1,6 +1,6 @@
 import { AfterViewInit, ViewChild, Component, OnInit } from '@angular/core';
 import { Article } from 'src/model/article';
-import { ArticleService } from '../article.service';
+import { ArticleService } from '../service/article.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
