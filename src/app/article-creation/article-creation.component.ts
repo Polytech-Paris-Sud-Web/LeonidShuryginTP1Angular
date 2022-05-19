@@ -1,16 +1,14 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ArticleNew } from 'src/model/articleNew';
-import { Article } from 'src/model/article';
-import { ArticleService } from '../service/article.service';
-import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
+//Service
+import { ArticleService } from '../service/article.service';
 
 @Component({
   selector: 'app-article-creation',
-  templateUrl: './article-creation.component.html',
-  styleUrls: ['./article-creation.component.css']
+  templateUrl: './article-creation.component.html'
 })
 export class ArticleCreationComponent implements OnInit {
   articleForm: FormGroup;

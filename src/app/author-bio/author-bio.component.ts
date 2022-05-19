@@ -9,8 +9,7 @@ import { AuthorBio } from 'src/model/authorBio';
 
 @Component({
   selector: 'app-author-bio',
-  templateUrl: './author-bio.component.html',
-  styleUrls: ['./author-bio.component.css']
+  templateUrl: './author-bio.component.html'
 })
 export class AuthorBioComponent implements OnInit {
   author: AuthorBio;

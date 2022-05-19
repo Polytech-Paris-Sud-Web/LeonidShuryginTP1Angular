@@ -2,19 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { Article } from 'src/model/article';
-import { ArticleService } from '../service/article.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+
+// Service
+import { ArticleService } from '../service/article.service';
+
+// Custom class
+import { Article } from 'src/model/article';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
   
-
   @Input()
   article?: Article;
 
